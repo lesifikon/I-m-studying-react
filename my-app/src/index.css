@@ -1,13 +1,65 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(0deg,rgba(255, 255, 255, 1) 17%, rgba(0, 0, 0, 1) 37%, rgba(0, 0, 0, 1) 68%, rgba(162, 156, 156, 1) 92%);
+  height: 6628px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header {
+  color: aliceblue;
+  /* text-align: center; */
+}
+
+.square {
+  margin: 0 auto; 
+  width: 90% ;
+  min-width: 700px;
+  height: 70px;
+  background-color: #000000;
+  justify-content: flex-end; /* Цвет фона */
+  border-radius: 30px;
+  position: relative;
+}
+
+.square .circle_1 {
+  position: absolute;
+  transform: translateY(5px) translateX(5px);
+  width: 60px; /* Ширина */
+  height: 60px; /* Высота */
+  background-color: #fff; /* Цвет фона */
+  border-radius: 50%; /* Скругление на 50% */
+}
+
+.square .circle_2 {
+  position: absolute;
+  transform: translate(-5px, 5px);
+  right: 0;
+  width: 60px; /* Ширина */
+  height: 60px; /* Высота */
+  background-color: #fff; /* Цвет фона */
+  border-radius: 50%; /* Скругление на 50% */
+}
+
+.square .circle_3 {
+  position: absolute;
+  transform: translate(-75px, 5px);
+  right: 0;
+  width: 60px; /* Ширина */
+  height: 60px; /* Высота */
+  background-color: #fff; /* Цвет фона */
+  border-radius: 50%; /* Скругление на 50% */
+}
+
+/* .square .circle_3 .presentation {
+  position: absolute;
+  background: url('/public/img/TG.png') no-repeat;
+  width: 100%;
+  height: 500px;
+} */
+
+.square .search {
+  position: absolute;
+  transform: translate(150px, 5px);
+  width: 350px; /* Ширина */
+  height: 60px; /* Высота */
+  background-color: #fff; /* Цвет фона */
+  border-radius: 15px;
 }
