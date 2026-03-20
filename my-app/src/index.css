@@ -63,3 +63,79 @@ body {
   background-color: #fff; /* Цвет фона */
   border-radius: 15px;
 }
+
+
+.App h2 {
+  text-align: center;
+  color: #000000;
+  font-size: 64px;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+
+.choice .window {
+  margin: 0 auto; 
+  width: 100%; /* Ширина */
+  aspect-ratio: 1920 / 600;  /* Высота */ 
+  background-color: #fff;
+  border-radius: 100px;
+  background: #000000;
+  position: relative;
+  margin-bottom: 150px;
+}
+
+.choice .window .cell_1 {
+  position: absolute;
+  width: 20%; /* Ширина */
+  height: 75%; /* Высота */
+  background-color: #fff;
+  border-radius: 100px;
+  background: #fff;
+  top: 50%;
+  left: 5%;
+  transform: translate(-5%, -50%);
+}
+
+.choice .window .cell_2 {
+  position: absolute;
+  width: 20%; /* Ширина */
+  height: 75%; /* Высота */
+  background-color: #fff;
+  border-radius: 100px;
+  background: #fff;
+  top: 50%;
+  left: 95%;
+  transform: translate(-95%, -50%);
+}
+
+.choice .window .cell_3 {
+  position: absolute;
+  width: 45%; /* Ширина */
+  height: 85%; /* Высота */
+  background-color: #fff;
+  border-radius: 100px;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.information h1 {
+  position: absolute;
+  left: 0;
+  color: #fff;
+  width: 50%;
+  text-align: center;
+}
+
+.information .presentation {
+  position: absolute;
+  left: 95%;
+  transform: translate(-95%, 0);
+  background: url('/public/img/bass_guitar_econka.png') no-repeat;
+  width: 100%;
+  height: 500px;
+}

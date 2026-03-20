@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Header from './components/Header';
+import Choice from './components/Choice';
+import Information from './components/Information';
 import './index.css'
 
 class App extends React.Component {
@@ -7,31 +9,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <div>dfadsgdagadsgasdgagasd</div>
-        <div>dfadsgdagadsgasdgagasd</div>
-        <div>dfadsgdagadsgasdgagasd</div>
-        <div>dfadsgdagadsgasdgagasd</div>
-        <div>dfadsgdagadsgasdgagasd</div>
-        <div>dfadsgdagadsgasdgagasd</div>
-        <div>dfadsgdagadsgasdgagasd</div>
-        <div>dfadsgdagadsgasdgagasd</div>
-        <div>dfadsgdagadsgasdgagasd</div>
-        <div>
-          <h1>dfadsgdagadsgasdgagasd</h1>
-          <h1>dfadsgdagadsgasdgagasd</h1>
-          <h1>dfadsgdagadsgasdgagasd</h1>
-          <h1>dfadsgdagadsgasdgagasd</h1>
-          <h1>dfadsgdagadsgasdgagasd</h1>
-          <h1>dfadsgdagadsgasdgagasd</h1>
-          <h1>dfadsgdagadsgasdgagasd</h1>
-          <h1>dfadsgdagadsgasdgagasd</h1>
-          <h1>dfadsgdagadsgasdgagasd</h1>
-          <h1>dfadsgdagadsgasdgagasd</h1>
-          <h1>dfadsgdagadsgasdgagasd</h1>
-          <h1>dfadsgdagadsgasdgagasd</h1>
-          <h1>dfadsgdagadsgasdgagasd</h1>
-          <h1>dfadsgdagadsgasdgagasd</h1>
-        </div>
+        <h2>Ваш путь в мир хорошей музики!</h2>
+        <Choice />
+        <Information />
       </div>
     )
   }
