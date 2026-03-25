@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 
 export class Information extends Component {
+    
+
     render() {
+
+        const {activeIndex, information} = this.props;
+
         return (
             <div className="information">
-                <h1>Бас-гитара — это
-струнно-щипковый электромузыкальный инструмент, создающий низкочастотный фундамент (бас) и ритмическую основу (грув) в музыкальной композиции. Обычно  имеет 4 толстые струны, удлиненный гриф и звучит на октаву ниже  электрогитары, связывая ритм ударных с гармонией остальных инструментов</h1>
+                <h1>{information[activeIndex]?.text || "Нет текста"}</h1>
                 <div className="presentation"></div>
             </div>
         )

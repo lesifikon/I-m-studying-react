@@ -78,7 +78,7 @@ body {
   width: 100%; /* Ширина */
   aspect-ratio: 1920 / 600;  /* Высота */ 
   border-radius: 100px;
-  background: #df6c6c;
+  background: #000000;
   position: relative;
   margin-bottom: 150px;
 
@@ -106,7 +106,7 @@ body {
   height: 100%;
   display: flex;
 
-  transition: translate;
+  transition: translate transform 0.3s ease;
   transition-property: transform;
   transition-duration: 500ms;
   transition-timing-function: ease-in-out;
@@ -173,19 +173,21 @@ body {
 
 .arrow {
   position: relative;
-  top: -5px;
+  top: -3%;
+  transform: translateY(-3%);
+  background-color: #fff;
+  border-radius: 100px;
   cursor: pointer;
 }
 
-
-
+/* 
 .information h1 {
   position: absolute;
   left: 0;
   color: #fff;
   width: 50%;
   text-align: center;
-}
+} */
 
 .information .presentation {
   position: absolute;

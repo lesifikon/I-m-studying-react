@@ -3,7 +3,7 @@ import {FaChevronLeft, FaChevronRight} from "react-icons/fa"
 
 const PAGW = 100
 
-export const Carousel = ({children}) => {
+export const Carousel = ({children, onIndexChange}) => {
     const [pages, setPages] = useState([])
     const [offset, setOffset] = useState(0)
 
@@ -24,20 +24,35 @@ export const Carousel = ({children}) => {
     }
 
     useEffect(() => {
-setPages(
-    Children.map(children, child => {
+    setPages(
+        Children.map(children, (child, index) => {
+        let activeIndex;
+        if (offset === 100) activeIndex = 0;
+        else if (offset === 0) activeIndex = 1;
+        else if (offset === -100) activeIndex = 2;
+
+        const isActive = index === activeIndex;
+
+        onIndexChange(activeIndex);
+
+        const extraShift = isActive ? 0 : 20;
+
         return cloneElement(child, {
+            // activeIndex: currentActiveIndex,
             style: {
-                transform: 'translateX(-100%)',
-                height: '100%', 
-                minWidth: `${PAGW}%`,
-                maxWidth: `${PAGW}%`,
-                borderRadius: 100,
+            ...child.props.style,
+            // Оставляем ваш обязательный параметр и добавляем масштаб
+            transform: `translateX(${offset - (index > activeIndex ? extraShift : -extraShift)}%) scale(${isActive ? 1 : 0.5})`,
+            transition: 'all 500ms ease-in-out',
+            height: '100%',
+            minWidth: `${PAGW}%`,
+            maxWidth: `${PAGW}%`,
+            borderRadius: 100,
             },
+        });
         })
-    })
-)
-    }, [])
+    );
+}, [offset, children, onIndexChange]);
 
     // render() {
     return (
@@ -46,11 +61,11 @@ setPages(
             <div className = "window">
                 <div className= "all-pages-container"
                 style={{
-                    transform: `translateX(${offset}%)`,
+                    transform: `translateX(-100%)`,
                 }}
                 >{pages}</div>
-            <FaChevronRight className = "arrow" onClick={handleRightArrowClick}/>
             </div>
+            <FaChevronRight className = "arrow" onClick={handleRightArrowClick}/>
         </div>
     )
 }
